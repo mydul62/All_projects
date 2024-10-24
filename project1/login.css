@@ -1,0 +1,349 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* common css */
+
+body {
+  font-family: Arial, sans-serif;
+}
+.container {
+  max-width: 1280px;
+  width: 98%;
+  margin: auto;
+}
+a {
+  text-decoration: none;
+}
+li{
+list-style: none;
+}
+
+/* navbar section  */
+.nav-section {
+  background-color: #002855;
+  position: fixed;
+  width: 100%;
+  z-index: inherit;
+}
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+}
+.new {
+  position: absolute;
+  top: 6px;
+  color: #f7941d;
+  font-size: 10px;
+  height: 8px;
+}
+
+.left-nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+}
+.weather-image {
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+}
+.nav-link {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 10px;
+}
+.nav-item {
+  position: relative;
+}
+.nav-link:hover {
+  border-bottom: 4px solid #007bffe5;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 140%;
+  left: 0;
+  background-color: #002d6d;
+  list-style: none;
+  padding: 10px;
+  border-top: 2px solid white;
+  z-index: 1; 
+}
+
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  padding: 5px 25px;
+}
+
+
+
+.nav-links ul{
+ color: white;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+}
+.marketplace-links {
+  margin-left: -10px;
+}
+.nav-links,
+.marketplace-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li,
+.marketplace-links li {
+  margin: 0 10px;
+}
+
+.nav-links li a,
+.marketplace-links li a {
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 300;
+}
+
+.nav-links li a:hover,
+.marketplace-links li a:hover {
+  text-decoration: underline;
+}
+.nav-group-new {
+  position: relative;
+}
+
+.new {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  color: #f7941d;
+  font-size: 10px;
+  height: 8px;
+}
+
+.nav-icons a {
+  color: white;
+  margin-left: 20px;
+  font-size: 18px;
+}
+
+.nav-icons a:hover {
+  color: lightgray;
+}
+
+.right-nav {
+  border-left: 1px solid hsla(0, 0%, 100%, 0.241);
+  padding-left: 10px;
+}
+.right-nav-bottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.marketplace {
+  font-size: 18px;
+  color: #ffffff40;
+  text-transform: uppercase;
+  font-weight: 700;
+  display: block;
+}
+
+/* login section  */
+.login-bg-top {
+  display: flex;
+  height: 65vh;
+  background-image: linear-gradient(180deg, #00000000 0%, #130a17ff 100%),
+    url(https://www.ksl.com/myaccount/images/member/marketplace_login.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login-top-bg-color {
+  width: 100%;
+  height: 100%;
+  background: #00000061;
+}
+.login-bg-bottom {
+  height: 35vh;
+  background-color: #0097e6;
+}
+.Login-form {
+  position: absolute;
+  top: 55%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 400px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.form .Login-title {
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
+  color: #ffffff;
+  margin-bottom: 30px;
+}
+
+.login-box {
+  max-width: 600px;
+  margin: auto;
+  border-radius: 10px;
+}
+.login-box h2 {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 600;
+  margin-bottom: 25px;
+  font-size: 20px;
+}
+
+.input-group {
+  margin-bottom: 15px;
+}
+
+.input-field {
+  width: 100%;
+  padding: 15px;
+  color: #cccccc88;
+  background-color: #ffffff2b;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+::placeholder {
+  color: #fff;
+}
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.terms {
+  font-size: 12px;
+  margin-bottom: 20px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+
+.terms a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.login-button {
+  width: 100%;
+  padding: 15px;
+  background-color: #fff;
+  color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.fontgetpassword-section {
+  margin-top: 30px;
+}
+.forgot-password {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  margin-top: 10px;
+  font-size: 14px;
+  color: #fff;
+}
+
+.signup {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: white;
+}
+
+.signup a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+/* footer section  */
+
+.footer {
+  background-color: #333;
+  color: white;
+  padding: 20px 0;
+}
+
+.footer-top {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+.footer-top-links a {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+.footer-bottom-links a {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 9px;
+}
+.footer-copyright {
+  border-top: 1px dotted #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 9px;
+}
+
+
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  position: relative;
+}
+
