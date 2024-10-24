@@ -26,13 +26,13 @@ li {
   background-color: #002855;
   position: fixed;
   width: 100%;
-  z-index: inherit;
+  z-index: 10; 
 }
 .navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px 0;
 }
 .new {
   position: absolute;
@@ -73,24 +73,43 @@ li {
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 140%;
+  top: 160%;
   left: 0;
   padding: 5px;
   background-color: #002d6d;
   list-style: none;
   border-top: 2px solid white;
+  z-index: 20; /* Higher z-index for dropdown */
+}
+.dropdown-menu-right {
+  display: none;
+  color: white;
+
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  top: 230%;
+  left: 0;
+  padding: 5px;
+  background-color: #002d6d;
+  list-style: none;
+  border-top: 2px solid white;
+  z-index: 20; 
 }
 .menu-indicator {
   position: absolute;
-  top: -15px;
+  top: -10px;
   left: 15px;
-  height: 15px;
+  height: 10px;
   width: 20px;
   background: white;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
 .dropdown-menu li {
   padding: 0 20px;
+}
+.menubar{
+display: none;
 }
 .nav-item:hover .dropdown-menu {
   display: block;
@@ -101,20 +120,11 @@ li {
   display: block;
   margin: 8px 0;
 }
-.nav-item a::before {
-  top: 100%;
-  left: 0;
-  display: none;
-  content: "";
-  height: 5px;
-  width: 100%;
-  background: #007bffdd;
-  border-radius: 6px;
-  position: absolute;
-}
 
-.nav-item:hover + .nav-item a::before {
-  display: block;
+
+.nav-item:hover{
+  
+border-bottom: 5px solid #007bffdd;
 }
 
 .marketplace-links {
@@ -156,7 +166,11 @@ li {
   font-size: 10px;
   height: 8px;
 }
-
+.nav-icons{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .nav-icons a {
   color: white;
   margin-left: 20px;
@@ -211,7 +225,7 @@ li {
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 400px;
-  z-index: 3;
+  z-index: 1;
 }
 .form {
   display: flex;
@@ -366,21 +380,35 @@ li {
 }
 
 /* user icon hover div  */
-.fa-user{
-position: relative;
+.fa-user {
+  position: relative;
 }
 .user-container {
   position: absolute;
-  top: 100%;
-  left: 0;
+  display: none;
+  background-color: #002d6d;
+  border-top: 2px solid white;
+  top: 240%;
+  right: 0;
   background-color: #033766;
   padding: 20px;
-  border-radius: 10px;
   text-align: center;
   color: white;
   width: 250px;
+  z-index: 20; /* Higher z-index for the user dropdown */
 }
-
+.fa-user:hover .user-container {
+  display: block;
+}
+.menu-indicator-user {
+  position: absolute;
+  top: -15px;
+  right: 0;
+  height: 15px;
+  width: 20px;
+  background: white;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
 .btn-signin {
   background-color: #33c0ff;
   color: white;
@@ -421,4 +449,154 @@ position: relative;
 
 .support-text {
   font-size: 16px;
+}
+
+/* weather sidebar */
+
+.weather-sidebar {
+  display: none;
+  background-color: #002d6d;
+  list-style: none;
+  border-top: 2px solid white;
+  position: absolute;
+  top: 170%;
+  left: 0;
+  width: 250px;
+  background-color: #003366;
+  color: white;
+  padding: 20px;
+}
+.weather:hover + .weather-sidebar{
+  display: block;
+}
+.weather-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.weather-header h3 {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.weather-header .change-link {
+  color: #f7941d;
+  text-decoration: none;
+  font-size: 12px;
+}
+
+.weather-info {
+  margin-bottom: 20px;
+}
+
+.temp-section {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.temp-section .temp {
+  font-size: 40px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.temp-section .details p {
+  font-size: 12px;
+}
+
+.forecast p {
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.forecast span {
+  font-weight: bold;
+}
+
+.weather-links ul {
+  list-style-type: none;
+}
+
+.weather-links ul li {
+  margin-bottom: 10px;
+}
+
+.weather-links ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.weather-links ul li a:hover {
+  color: #f7941d;
+}
+
+
+@media(max-width: 768px) {
+
+.container {
+padding:0 10px;
+}
+
+
+  /* nav */
+  
+  .nav-links, .marketplace-links,.marketplace{
+  display: none !important;
+  }
+  .right-nav{
+  border: none !important;
+  }
+  .menubar{
+  display: flex !important;;
+  justify-content: center !important;
+  }
+/* footer */
+.footer {
+  padding: 20px 0;
+}
+
+.footer-top {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 25px;
+  margin-bottom: 20px;
+}
+.footer-top-links a {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 12px;
+}
+.footer-bottom-links a {
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 9px;
+}
+.footer-copyright {
+  border-top: 1px dotted #eee;
+  padding-top: 12px;
+  margin-top: 12px;
+  color: #fff;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 9px;
+}
+
+.nav-links-middle-fotter {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
+}
+
+.nav-item {
+  position: relative;
+}
+
+
 }
