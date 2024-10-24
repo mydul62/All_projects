@@ -17,8 +17,8 @@ body {
 a {
   text-decoration: none;
 }
-li{
-list-style: none;
+li {
+  list-style: none;
 }
 
 /* navbar section  */
@@ -59,47 +59,64 @@ list-style: none;
   width: 30px;
   display: inline-block;
 }
-.nav-link {
-  color: white;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 10px;
-}
-.nav-item {
-  position: relative;
-}
-.nav-link:hover {
-  border-bottom: 4px solid #007bffe5;
+.nav-links {
+  padding-top: 20px;
+  list-style-type: none;
+  display: flex;
+  justify-content: space-around;
 }
 
 .dropdown-menu {
   display: none;
+  color: white;
+  width: 150px;
+  flex-direction: column;
+  gap: 10px;
   position: absolute;
   top: 140%;
   left: 0;
+  padding: 5px;
   background-color: #002d6d;
   list-style: none;
-  padding: 10px;
   border-top: 2px solid white;
-  z-index: 1; 
 }
-
-
+.menu-indicator {
+  position: absolute;
+  top: -15px;
+  left: 15px;
+  height: 15px;
+  width: 20px;
+  background: white;
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.dropdown-menu li {
+  padding: 0 20px;
+}
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
 .dropdown-menu a {
   color: white;
   text-decoration: none;
   display: block;
-  padding: 5px 25px;
+  margin: 8px 0;
+}
+.nav-item a::before {
+  top: 100%;
+  left: 0;
+  display: none;
+  content: "";
+  height: 5px;
+  width: 100%;
+  background: #007bffdd;
+  border-radius: 6px;
+  position: absolute;
 }
 
-
-
-.nav-links ul{
- color: white;
- display: flex;
- flex-direction: column;
- gap: 10px;
+.nav-item:hover + .nav-item a::before {
+  display: block;
 }
+
 .marketplace-links {
   margin-left: -10px;
 }
@@ -194,6 +211,7 @@ list-style: none;
   transform: translate(-50%, -50%);
   width: 100%;
   max-width: 400px;
+  z-index: 3;
 }
 .form {
   display: flex;
@@ -316,6 +334,7 @@ list-style: none;
   display: flex;
   justify-content: space-between;
   gap: 25px;
+  margin-bottom: 20px;
 }
 .footer-top-links a {
   color: #fff;
@@ -336,8 +355,7 @@ list-style: none;
   font-size: 9px;
 }
 
-
-.nav-links {
+.nav-links-middle-fotter {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
@@ -347,3 +365,60 @@ list-style: none;
   position: relative;
 }
 
+/* user icon hover div  */
+.fa-user{
+position: relative;
+}
+.user-container {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #033766;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  color: white;
+  width: 250px;
+}
+
+.btn-signin {
+  background-color: #33c0ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.btn-signin:hover {
+  background-color: #29a3e3;
+}
+
+.or-create {
+  margin-bottom: 20px;
+}
+
+.separator {
+  border: none;
+  height: 1px;
+  background-color: white;
+  margin-bottom: 20px;
+}
+
+.support {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.support-icon {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
+.support-text {
+  font-size: 16px;
+}
