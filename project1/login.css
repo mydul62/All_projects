@@ -120,12 +120,14 @@ display: none;
   display: block;
   margin: 8px 0;
 }
-
-
-.nav-item:hover{
-  
-border-bottom: 5px solid #007bffdd;
+.nav-item {
+  position: relative;
 }
+
+/* .nav-item:hover{
+
+border-bottom: 5px solid #007bffdd;
+} */
 
 .marketplace-links {
   margin-left: -10px;
@@ -375,9 +377,7 @@ border-bottom: 5px solid #007bffdd;
   justify-content: space-around;
 }
 
-.nav-item {
-  position: relative;
-}
+
 
 /* user icon hover div  */
 .fa-user {
@@ -394,8 +394,8 @@ border-bottom: 5px solid #007bffdd;
   padding: 20px;
   text-align: center;
   color: white;
-  width: 250px;
-  z-index: 20; /* Higher z-index for the user dropdown */
+  width: 360px;
+  z-index: 20; 
 }
 .fa-user:hover .user-container {
   display: block;
@@ -425,7 +425,8 @@ border-bottom: 5px solid #007bffdd;
 }
 
 .or-create {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
+  font-size: 14px;
 }
 
 .separator {
@@ -445,6 +446,7 @@ border-bottom: 5px solid #007bffdd;
   width: 24px;
   height: 24px;
   margin-right: 10px;
+  color: white;
 }
 
 .support-text {
