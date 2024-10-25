@@ -83,6 +83,7 @@ width: 50px;
   list-style: none;
   border-top: 2px solid white;
   z-index: 20; 
+   transition: opacity 0.3s ease, transform 0.3s ease;
 }
 .dropdown-menu-right {
   display: none;
@@ -115,6 +116,7 @@ width: 50px;
 }
 .nav-item:hover .dropdown-menu {
   display: block;
+  transition: positoon 0.3s; 
 }
 .dropdown-menu a {
   color: white;
@@ -127,8 +129,8 @@ width: 50px;
   padding: 15px 0;
 }
 
- .nav-item > a:hover{
-border-bottom: 4px solid #0097e6;
+.nav-item:hover > a {
+  border-bottom: 4px solid #0097e6;
 }
 
 .marketplace-links {
@@ -267,10 +269,17 @@ position: absolute;
 .input-field {
   width: 100%;
   padding: 15px;
-  color: #cccccc88;
+  font-size: 16px;
+  color: white;
   background-color: #ffffff2b;
   border: 1px solid #ccc;
   border-radius: 5px;
+  transition: background-color 0.3s; 
+}
+
+.input-field:focus {
+  background-color: transparent;
+  border: 1px solid #007bff;
 }
 
 ::placeholder {
