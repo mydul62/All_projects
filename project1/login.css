@@ -35,7 +35,6 @@ li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
 }
 .new {
   position: absolute;
@@ -84,13 +83,13 @@ width: 50px;
   flex-direction: column;
   gap: 10px;
   position: absolute;
-  top: 160%;
+  top: 100%;
   left: 0;
   padding: 5px;
   background-color: #002d6d;
   list-style: none;
   border-top: 2px solid white;
-  z-index: 20; /* Higher z-index for dropdown */
+  z-index: 20; 
 }
 .dropdown-menu-right {
   display: none;
@@ -133,6 +132,7 @@ width: 50px;
 }
 .nav-item {
   position: relative;
+  padding: 15px 0;
 }
 
 /* .nav-item:hover{
@@ -389,7 +389,7 @@ border-bottom: 5px solid #007bffdd;
 }
 
 /* user icon hover div  */
-.fa-user {
+.user-templete{
   position: relative;
 }
 .user-container {
@@ -397,7 +397,7 @@ border-bottom: 5px solid #007bffdd;
   display: none;
   background-color: #002d6d;
   border-top: 2px solid white;
-  top: 240%;
+  top: 100%;
   right: 0;
   background-color: #033766;
   padding: 20px;
@@ -406,7 +406,10 @@ border-bottom: 5px solid #007bffdd;
   width: 360px;
   z-index: 20;
 }
-.fa-user:hover .user-container {
+.user-templete{
+padding: 20px;
+}
+.user-templete:hover .user-container {
   display: block;
 }
 .menu-indicator-user {
@@ -470,14 +473,14 @@ border-bottom: 5px solid #007bffdd;
   list-style: none;
   border-top: 2px solid white;
   position: absolute;
-  top: 170%;
+  top: 90%;
   left: 0;
   width: 250px;
   background-color: #003366;
   color: white;
   padding: 20px;
 }
-.weather:hover + .weather-sidebar {
+.nav-item:hover .weather-sidebar {
   display: block;
 }
 .weather-header {
