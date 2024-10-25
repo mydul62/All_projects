@@ -4,11 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Header Design</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
   <link rel="stylesheet" href="./login.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-  <header>
+  <header class="header">
     <nav class=" nav-section">
     <div class="navbar container">
       <div class="left-nav">
@@ -226,12 +228,179 @@
             <div class="menu-indicator-user"></div>
         </div>
         </i></a>
-        <a class="menubar" href="#"><i class="fa-solid  fa-bars"></i></a>
+        <a id="toggle-button" class="menubar" onclick="toggleMenu()" href="#"><i class="fa-solid  fa-bars"></i></a>
       </div>
      </div>
      </div>
     </div>
     </nav>
+    <div class="mobile-sidebar">
+      <div id="sidebar" class="mobile-menu">
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <span class="close-btn">Close ×</span>
+            </div>
+            <ul class="menu menu-list">
+                <li class="menu-item">News
+                    <span class="arrow">▼</span>
+                    <ul class="submenu-list submenu">
+                       <li ><a href="#">My Listings</a></li>
+            <li><a href="#"> Favorites</a></li>
+            <li><a href="#"> Saved Searches</a></li>
+            <li><a href="#">Messages</a></li>
+            <li><a href="#">Add Listing</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="#">Support</a></li>
+            <div class="menu-indicator"></div>
+                    </ul>
+                </li>
+                <li class="menu-item">Sports
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">Utah Jazz</a></li>
+                    <li><a href="#"> Utah HC</a></li>
+                    <li><a href="#">BYU Cougars</a></li>
+                    <li><a href="#">Utah Utes</a></li>
+                    <li><a href="#">Big 12 Hotline</a></li>
+                    <li><a href="#">Utah State Aggies</a></li>
+                    <li><a href="#">Weber State Wildcats</a></li>
+                    <li><a href="#">Real Salt Lake</a></li>
+                    <li><a href="#">National</a></li>
+                    <li><a href="#">Pick'em - College</a></li>
+                    <li><a href="#">Beyond the Game</a></li>
+                    <li><a href="#">High School</a></li>
+                    <li><a href="#">Stats & Scores</a></li>
+                </ul>
+                </li>
+                <li class="menu-item">Beyond Series
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">Beyond the game</a></li>
+                </ul>
+                </li>
+                <li class="menu-item">Brandview
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">Minky Couture</a></li>
+                    <li><a href="#"> Salt Lake Chamber</a></li>
+                    <li><a href="#">Utah Real Estate</a></li>
+                    <li><a href="#">RC Willey</a></li>
+                    <li><a href="#">U of U Health</a></li>
+                    <li><a href="#">Intermountain Health</a></li>
+                </ul>
+                </li>
+                <li class="menu-item">TV
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#"> Watch Livez</a></li>
+                    <li><a href="#"> Meet Our Team</a></li>
+                    <li><a href="#">Contests & Promotions</a></li>
+                    <li><a href="#">KSL Investigators</a></li>
+                    <li><a href="#">High 5</a></li>
+                    <li><a href="#"> Studio 5</a></li>
+                    <li><a href="#">Outdoors with Adam Eakle</a></li>
+                    <li><a href="#">Your Life Your Health</a></li>
+                    <li><a href="#">Wednesday's Child</a></li>
+                    <li><a href="#">Read Today</a></li>
+                    <li><a href="#">Beyond the Game</a></li>
+                    <li><a href="#">Program Guide</a></li>
+                </ul>
+                </li>
+                <li class="menu-item">Radio
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">Listen Live</a></li>
+                    <li ><a href="#">Top Stories</a></li>
+                    <li ><a href="#">KSL Schedule</a></li>
+                    <li ><a href="#">Podcasts</a></li>
+                    <li ><a href="#">Meet Our Team</a></li>
+                    <li ><a href="#">Contests & Promotions</a></li>
+                    <li ><a href="#">Newsletter Signup</a></li>
+                </ul>
+                </li>
+                <li class="menu-item">Obituaries
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">Create Life Story</a></li>
+                    <li><a href="#">  My Life Stories</a></li>
+                </ul>
+                </li>
+                
+            </ul>
+            <p class="merket-place">Marketplace</p>
+            <ul class="menu menu-list">
+              <li class="menu-item">Classifieds
+                  <span class="arrow">▼</span>
+                  <ul class="submenu-list submenu">
+                    <li ><a href="#">My Listings</a></li>
+                    <li><a href="#"> Favorites</a></li>
+                    <li><a href="#"> Saved Searches</a></li>
+                    <li><a href="#">Messages</a></li>
+                    <li><a href="#">Add Listing</a></li>
+                    <li><a href="#">Resources</a></li>
+                    <li><a href="#">Support</a></li>
+                    <div class="menu-indicator"></div>
+                  </ul>
+              </li>
+              <li class="menu-item">Cars
+                <span class="arrow">▼</span>
+                <ul class="submenu-list submenu">
+                  <li ><a href="#">My Listings</a></li>
+                  <li><a href="#"> Favorites</a></li>
+                  <li><a href="#"> Saved Searches</a></li>
+                  <li><a href="#">Messages</a></li>
+                  <li><a href="#">Add Listing</a></li>
+                  <li><a href="#">Support</a></li>
+              </ul>
+              </li>
+              <li class="menu-item">Homes
+                <span class="arrow">▼</span>
+                <ul class="submenu-list submenu">
+                  <li ><a href="#">My Listings</a></li>
+            <li><a href="#"> List a bunissiness</a></li>
+            <li><a href="#">Support</a></li>
+              </ul>
+              </li>
+              <li class="menu-item">Brandview
+                <span class="arrow">▼</span>
+                <ul class="submenu-list submenu">
+                  <li ><a href="#">Minky Couture</a></li>
+                  <li><a href="#"> Salt Lake Chamber</a></li>
+                  <li><a href="#">Utah Real Estate</a></li>
+                  <li><a href="#">RC Willey</a></li>
+                  <li><a href="#">U of U Health</a></li>
+                  <li><a href="#">Intermountain Health</a></li>
+              </ul>
+              </li>
+              <li class="menu-item">Jobs
+                <span class="arrow">▼</span>
+                <ul class="submenu-list submenu">
+                  <li ><a href="#">Utah Jazz</a></li>
+                  <li><a href="#"> Utah HC</a></li>
+                  <li><a href="#">BYU Cougars</a></li>
+                  <li><a href="#">Utah Utes</a></li>
+                  <li><a href="#">Big 12 Hotline</a></li>
+                  <li><a href="#">Utah State Aggies</a></li>
+              </ul>
+              </li>
+              <li class="menu-item">Services
+                <span class="arrow">▼</span>
+                <ul class="submenu-list submenu">
+                  <li ><a href="#">Utah Jazz</a></li>
+                  <li><a href="#"> Utah HC</a></li>
+                  <li><a href="#">BYU Cougars</a></li>
+                  <li><a href="#">Utah Utes</a></li>
+                  <li><a href="#">Big 12 Hotline</a></li>
+                  <li><a href="#">Utah State Aggies</a></li>
+              </ul>
+              </li>
+              
+          </ul>
+        </div>
+    </div>
+    
+    
+    </div>
   </header>
   <div class="login-section">
   <div class="login-bg-top"><div class=" login-top-bg-color"></div></div>
@@ -298,5 +467,9 @@
         
     </div>
 </footer>
+
+<script src="index.js">
+
+</script>
 </body>
 </html>
