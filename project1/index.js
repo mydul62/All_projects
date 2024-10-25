@@ -1,6 +1,20 @@
 function toggleMenu() {
   document.querySelector('.mobile-menu').classList.toggle('show');
 }
+$(document).ready(function() {
+  $('.search-temp').on('click', function(event) {
+      event.preventDefault();
+      $('.search-templete').toggle();
+  });
+
+  // Optionally, close the template if clicked outside
+  $(document).click(function(event) {
+      if (!$(event.target).closest('.search-temp, .search-templete').length) {
+          $('.search-templete').hide();
+      }
+  });
+});
+
 
 $(document).ready(function() {
   // Close the sidebar
