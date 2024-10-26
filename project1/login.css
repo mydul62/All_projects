@@ -405,11 +405,13 @@ li {
   color: #fff;
   font-family: "Nunito Sans", sans-serif;
   font-size: 12px;
+  text-decoration: none;
 }
 .footer-bottom-links a {
   color: #fff;
   font-family: "Nunito Sans", sans-serif;
   font-size: 9px;
+  text-decoration: none;
 }
 .footer-copyright {
   border-top: 1px dotted #eee;
