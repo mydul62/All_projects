@@ -7,16 +7,14 @@
 /* common css */
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito Sans", sans-serif !important;
 }
 .container {
   max-width: 1280px;
   width: 98%;
   margin: auto;
 }
-a {
-  text-decoration: none !important;
-}
+
 li {
   list-style: none;
 }
@@ -25,6 +23,8 @@ li {
 .nav-section {
   background-color: #002855;
   position: fixed;
+  top: 0;
+  left: 0;
   width: 100%;
   z-index: 10;
 }
@@ -54,7 +54,9 @@ li {
   height: 20px;
   width: 20px;
 }
-
+.logo-image {
+  margin-right: 10px;
+}
 .temp {
   display: flex;
   align-items: center;
@@ -69,6 +71,9 @@ li {
   list-style-type: none;
   display: flex;
   justify-content: space-around;
+}
+.nav-links > a {
+  text-decoration: none !important;
 }
 
 .dropdown-menu {
@@ -137,6 +142,7 @@ li {
 
 .marketplace-links {
   margin-left: -10px;
+  margin-top: 5px;
 }
 .nav-links,
 .marketplace-links {
@@ -146,15 +152,14 @@ li {
 
 .nav-links li,
 .marketplace-links li {
-  margin: 0 10px;
+  margin: 0 5px;
 }
 
 .nav-links li a,
 .marketplace-links li a {
   color: white;
   text-decoration: none;
-  font-size: 16px;
-  font-family: "Nunito Sans", sans-serif;
+  font-size: 14px;
   font-weight: 300;
 }
 
@@ -178,6 +183,7 @@ li {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: -8px;
 }
 .nav-icons a {
   color: white;
@@ -212,7 +218,7 @@ li {
 /* login section  */
 .login-bg-top {
   display: flex;
-  height: 65vh;
+  height: 63vh;
   background-color: blue;
   background-image: linear-gradient(
       180deg,
@@ -256,7 +262,7 @@ li {
 }
 
 .login-box {
-  max-width: 600px;
+  max-width: 576px;
   margin: auto;
   border-radius: 10px;
 }
@@ -295,11 +301,25 @@ li {
   color: red;
   font-size: 12px;
   margin-top: 5px;
-  display: block;
+  display: none;
 }
 
 .password-wrapper {
   position: relative;
+}
+#password{
+    width: 100%;
+    padding: 15px;
+    font-size: 14px;
+    color: white;
+    background-color: #ffffff2b;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+#password:focus {
+  border-color: #009DD6; 
+  box-shadow: 0 0 0 2px rgba(0, 157, 214, 0.5);
 }
 
 .toggle-password {
@@ -312,14 +332,17 @@ li {
 
 .terms {
   font-size: 12px;
-  margin-bottom: 20px;
   font-family: "Nunito Sans", sans-serif;
   font-size: 16px;
   color: white;
 }
-
+.nav-links li,
+.marketplace-links li {
+  list-style: none !important;
+  margin: 0 5px;
+}
 .terms a {
-  color: #007bff;
+  color: #4dbae2;
   text-decoration: none;
 }
 
@@ -327,7 +350,7 @@ li {
   width: 100%;
   padding: 15px;
   background-color: #fff;
-  color: #007bff;
+  color: #4dbae2;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -401,7 +424,8 @@ li {
 .user-templete {
   position: relative;
 }
-.search-temp{
+
+.search-temp {
   position: relative;
 }
 .user-container {
@@ -409,7 +433,7 @@ li {
   display: none;
   background-color: #002d6d;
   border-top: 2px solid white;
-  top: 100%;
+  top: 90%;
   right: -20px;
   background-color: #033766;
   padding: 20px;
@@ -417,10 +441,10 @@ li {
   width: 360px;
   z-index: 20;
 }
-.nav-icons{
-position: relative;
+.nav-icons {
+  position: relative;
 }
-.search-templete{
+.search-templete {
   position: absolute;
   display: block;
   background-color: #002d6d;
@@ -433,7 +457,7 @@ position: relative;
   z-index: 20;
 }
 .user-templete {
-  padding: 15px 0;
+  padding: 15px 15px;
 }
 .user-container p {
   text-align: center;
@@ -451,29 +475,56 @@ position: relative;
   background: white;
   clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
 }
+
+.login-button {
+  width: 100%;
+  justify-content: center;
+  height: 52.8px;
+  border-radius: 0.4rem;
+  margin: 0.6rem 0;
+  background-color: white;
+  outline: none;
+}
+
+.login-button:hover {
+  border-style: solid;
+  border-width: 1px;
+  margin-left: 1px;
+  margin-right: 1px;
+  border-color: rgb(0, 157, 214);
+  outline: none;
+}
 .signin-btn-box {
   display: flex;
+  margin: 24px 0;
   justify-content: center;
 }
-.btn-signin {
-  background-color: #33c0ff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
+.signin-btn-box button {
+  background-color: #00afef;
   border-radius: 5px;
-  font-size: 16px;
+  border-width: 0;
+  color: #fff;
   cursor: pointer;
-  margin-bottom: 20px;
+  display: inline-block;
+  font-size: 16px;
+  height: 28px;
+  line-height: 28px;
+  padding: 0 10px;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
+  vertical-align: baseline;
 }
-
-.btn-signin:hover {
-  background-color: #29a3e3;
-}
-
 .or-create {
   margin-bottom: 12px;
 }
-
+.user-container p {
+  text-align: center;
+  font-size: 16px;
+}
+.support p {
+  font-size: 16px !important;
+}
 .separator {
   border: none;
   height: 1px;
@@ -593,22 +644,22 @@ position: relative;
 /* mobile menu  */
 
 .mobile-menu {
-  background-color: #002d66 !important; 
-  color: white; 
-  position: fixed; 
-  top: 0; 
+  background-color: #002d66 !important;
+  color: white;
+  position: fixed;
+  top: 0;
   right: -2400px;
-  width: 100%; 
-  height: 100vh; 
-  z-index: 1000; 
-  transition: right 0.3s ease; 
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  transition: right 0.3s ease;
 }
 
 .mobile-menu.show {
   right: 0; /* Bring it on-screen when visible */
 }
-.mobile-sidebar{
-display: none;
+.mobile-sidebar {
+  display: none;
 }
 .sidebar {
   width: 100%;
@@ -638,12 +689,11 @@ display: none;
   cursor: pointer;
 }
 
-
 .mobile-menu {
   display: block; /* Show the mobile menu */
   background-color: #f8f9fa;
   border: 1px solid #ccc;
-  width: 100%; 
+  width: 100%;
   padding: 0; /* Optional, for aesthetics */
 }
 
@@ -664,7 +714,7 @@ display: none;
 
 .menu-list {
   list-style: none;
-  
+
   padding: 0;
 }
 
@@ -672,7 +722,6 @@ display: none;
   position: relative;
   padding: 10px;
   cursor: pointer;
-  
 }
 
 .submenu {
@@ -680,7 +729,7 @@ display: none;
   padding-left: 20px;
   transition: all 0.3s ease; /* Smooth transition */
 }
-.submenu a{
+.submenu a {
   color: white;
 }
 .submenu.show {
@@ -691,7 +740,7 @@ display: none;
   margin-left: 10px;
   font-size: 12px;
 }
-.merket-place{
+.merket-place {
   font-size: 20px;
   font-weight: bold;
   text-align: center;
@@ -723,14 +772,78 @@ button {
   border-radius: 0 4px 4px 0;
   cursor: pointer;
 }
+/* Input Wrapper and Styled Input */
+.input-wrapper, .password-wrapper {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
 
-button:hover {
-  background-color: #008fcc;
+.styled-input {
+  box-sizing: border-box;
+  padding: 1.0625em 1.75em 1.0625em 0.75em;
+  width: 100%;
+  height: 3.125em;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 0.25em;
+  outline: none;
+  caret-color: #ffffff;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+.styled-input::placeholder {
+  color: transparent;
+}
+
+/* Input Label */
+.input-label {
+  position: absolute;
+  top: 16px;
+  left: 10px;
+  font-size: 14px;
+  color: white;
+  background: transparent;
+  padding: 0 4px;
+  transition: all 0.2s ease;
+}
+
+/* Focus Styles */
+.styled-input:focus{
+  border-color: #009DD6;
+  box-shadow: 0 0 0 2px rgba(0, 157, 214, 0.5);
+  background: transparent;
 }
 
 
+/* Move label on input focus */
+.input-wrapper:focus-within .input-label,
+.password-wrapper:focus-within .input-label {
+  top: -8px;
+  font-size: 12px;
+  color: #009DD6;
+  background: #33333398;
+}
 
-@media (max-width: 768px) {
+/* Toggle Password Button */
+.toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: white;
+  font-size: 1.2em;
+}
+
+.eyeopen, .eyeclose {
+  display: inline;
+}
+
+ @media (max-width: 768px) {
   .container {
     padding: 0 20px;
   }
@@ -749,9 +862,9 @@ button:hover {
     display: flex !important;
     justify-content: center !important;
   }
-  .mobile-sidebar{
-    display: flex !important;;
-    }
+  .mobile-sidebar {
+    display: flex !important;
+  }
   .header-logo-text {
     display: block !important;
     color: white !important;
@@ -810,7 +923,7 @@ button:hover {
   .nav-item {
     position: relative;
   }
-  
+
   /* .search-templete{
     position: absolute;
     display: none ;

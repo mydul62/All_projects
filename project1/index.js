@@ -1,6 +1,10 @@
+
+// for submenu
 function toggleMenu() {
   document.querySelector('.mobile-menu').classList.toggle('show');
 }
+
+// for search
 $(document).ready(function() {
   $('.search-temp').on('click', function(event) {
       event.preventDefault();
@@ -16,21 +20,35 @@ $(document).ready(function() {
 });
 
 
+// For menu list
 $(document).ready(function() {
   // Close the sidebar
   $('.close-btn').on('click', function() {
-      $('#sidebar').hide(); // Hide sidebar when close button is clicked
+      $('#sidebar').hide();
   });
 
   // Toggle submenu on menu item click
   $('.menu-item > span.arrow').on('click', function(e) {
-      e.stopPropagation(); // Prevent the click from bubbling up
+      e.stopPropagation(); 
 
-      // Close any other open submenus
       $('.submenu.show').not($(this).parent().find('.submenu')).removeClass('show'); 
 
       // Toggle the clicked submenu
       $(this).parent().find('.submenu').toggleClass('show'); 
   });
 });
+
+// For eye open/close toggle
+$(document).ready(function() {
+  $('.toggle-password').on('click', function() {
+      let passwordField = $('#password');
+      let isPassword = passwordField.attr('type') === 'password';
+      // Toggle the password visibility
+      passwordField.attr('type', isPassword ? 'text' : 'password');
+      $(this).find('.eyeopen').toggle(!isPassword);
+      $(this).find('.eyeclose').toggle(isPassword);
+  });
+});
+
+
 
