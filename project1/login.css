@@ -19,6 +19,7 @@ li {
   list-style: none;
 }
 
+
 /* navbar section  */
 .nav-section {
   background-color: #002855;
@@ -72,9 +73,7 @@ li {
   display: flex;
   justify-content: space-around;
 }
-.nav-links > a {
-  text-decoration: none !important;
-}
+
 
 .dropdown-menu {
   display: none;
@@ -138,6 +137,7 @@ li {
 
 .nav-item:hover > a {
   border-bottom: 4px solid #0097e6;
+  text-decoration: none !important;
 }
 
 .marketplace-links {
@@ -308,15 +308,21 @@ li {
   position: relative;
 }
 #password{
+    box-sizing: border-box;
+    padding: 1.0625em 1.75em 1.0625em 0.75em;
     width: 100%;
-    padding: 15px;
-    font-size: 14px;
-    color: white;
-    background-color: #ffffff2b;
+    height: 3.125em;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.2);
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 16px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 0.25em;
+    outline: none;
+    caret-color: #ffffff;
+    transition: border 0.2s, box-shadow 0.2s;
 }
+
 #password:focus {
   border-color: #009DD6; 
   box-shadow: 0 0 0 2px rgba(0, 157, 214, 0.5);
